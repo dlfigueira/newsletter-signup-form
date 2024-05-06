@@ -14,6 +14,7 @@ val DarkSlateGrey = Color.hsl(234F, 0.29F, 0.2F)
 val CharcoalGrey = Color.hsl(235F, 0.18F, 0.26F)
 val Grey = Color.hsl(231F, 0.07F, 0.6F)
 val White = Color.hsl(0F, 0F, 1F)
+val OffBlack = Color.hsl(234F, 0.29F, 0.15F)
 
 val robotoFontFamily = FontFamily(
     Font(File("font/Roboto-Bold.ttf").path, weight = FontWeight.W700, style = FontStyle.Normal),
