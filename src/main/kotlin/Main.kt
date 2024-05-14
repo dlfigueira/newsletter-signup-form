@@ -24,17 +24,26 @@ fun App(viewModel: AppViewModel) {
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.fillMaxSize().background(color = OffBlack)
         ) {
-            NewsletterSignupForm(viewModel, modifier = Modifier
-                .fillMaxWidth(0.8f)
-                .fillMaxHeight(0.8f))
+            if(viewModel.successfullySubscribed) showSubscriptionSuccess(viewModel) else showSignupForm(viewModel)
         }
     }
+}
+
+@Composable
+fun showSignupForm(viewModel: AppViewModel) {
+    NewsletterSignupForm(viewModel, modifier = Modifier.fillMaxWidth(0.8f).fillMaxHeight(0.8f))
+}
+
+@Composable
+fun showSubscriptionSuccess(viewModel: AppViewModel) {
+    SubscriptionSuccess(viewModel, modifier = Modifier.fillMaxWidth(0.5f).fillMaxHeight(0.7f))
 }
 
 fun main() = application {
     val viewModel = AppViewModel()
 
     Window(
+        title = "Newsletter Signup Form",
         state = rememberWindowState(width = 1000.dp, height = 700.dp),
         onCloseRequest = ::exitApplication
     ) {
