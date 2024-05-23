@@ -21,5 +21,4 @@ val robotoFontFamily = FontFamily(
     Font(File("font/Roboto-Regular.ttf").path, weight = FontWeight.W400, style = FontStyle.Normal),
 )
 
-val defaultTypography =
-    Typography(defaultFontFamily = robotoFontFamily, body1 = TextStyle(fontSize = 16.sp, color = CharcoalGrey))
+val defaultTypography = Typography(defaultFontFamily = robotoFontFamily, body1 = TextStyle(fontSize = 16.sp))
